@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --mainColor: #ffb800;
+}
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#body-homepage {
+  background: var(--mainColor);
+}
+.main-homepage {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-recipe {
+  width: 90%;
+  max-width: 1012px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+.title {
+  margin: 0;
+  font-weight: 800;
+}
+
+.intro {
+  -webkit-box-shadow: 4px 6px 41px 11px rgba(0, 0, 0, 0.43);
+  box-shadow: 4px 6px 41px 11px rgba(0, 0, 0, 0.43);
+  background: #fdfdfa;
+  border-radius: 1rem;
+  padding: 4rem;
+  text-align: center;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.intro ul {
+  margin-top: 0.5rem;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+ul li::before {
+  content: "\2022";
+  color: var(--mainColor);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.recipe-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--mainColor);
+  color: #000000;
+  min-height: 40vh;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 5rem;
+}
+.recipe-container ul {
+  font-weight: 300;
+}
+.recipe-container ul li {
+  display: flex;
+  align-items: center;
+  line-height: 24px;
+  gap: 0.1rem;
+}
+
+.recipe-container ul li::before {
+  content: "";
+}
+.recipe-name {
+  margin: 0 0 0 2.5rem;
+  font-weight: 800;
+}
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.right-side {
+  padding-left: 5%;
+}
+.right-side img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  max-height: 425px;
+  object-fit: cover;
+  vertical-align: bottom;
+  border-bottom-right-radius: 5rem;
+}
+.ingredients,
+.steps {
+  padding-left: 1rem;
+}
+.steps li::marker {
+  color: var(--mainColor);
+}
